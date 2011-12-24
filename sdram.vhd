@@ -474,7 +474,9 @@ begin
 	process (clk_000)
 	begin
 		if (rising_edge(clk_000)) then
-			if (dcm_locked = '1') then
+			if (reset = '1') then
+				cmd_state <= STATE_START;
+			elsif (dcm_locked = '1') then
 				case cmd_state is
 					when STATE_START =>
 						busy_n <= '0';
