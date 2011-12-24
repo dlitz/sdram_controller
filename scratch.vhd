@@ -62,7 +62,7 @@ architecture impl of scratch is
 	signal dcm_clk_000     : std_logic;
 	signal dcm_clk_raw_000 : std_logic;
 
-	signal op      : std_logic_vector(1 downto 0);
+	signal op      : std_logic_vector(1 downto 0) := "00";
 	signal addr    : std_logic_vector(25 downto 0);
 	signal op_ack  : std_logic;
 	signal busy_n  : std_logic;
